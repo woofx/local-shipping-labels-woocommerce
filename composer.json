@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Woofx\\LocalShippingLabelsForWooCommerce\\": "includes",
+            "Woofx\\LocalShippingLabelsForWooCommerce\\Admin\\": "admin"
+        }
+    },
+    "require": {
+        "dompdf/dompdf": "^0.8.3"
+    }
+}
