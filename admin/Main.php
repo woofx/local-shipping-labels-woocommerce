@@ -271,8 +271,9 @@ class Main {
 
 		// prepare amount
 		$amount_html = "Amount: {$order->get_currency()} {$order->get_total()}";
-		if(in_array($order->get_payment_method_title(),$_options_mark_as_paid)){
-			$amount .= " (Paid)";
+		$_method = $order->get_payment_method();
+		if( isset($_options_mark_as_paid[$_method]) && $_options_mark_as_paid[$_method] == 1 ){
+			$amount_html .= " <strong>(PAID)</strong>";
 		}
 		$amount_html .= "<br>";
 		

@@ -132,13 +132,13 @@ class Settings {
 			// loop gateways
 			foreach( $available_payment_methods as $method ) {
 				$html .= sprintf('<input type="checkbox" id="%s" name="%s[%s]" value="1" %s />',
-					$method->method_title,
+					$method->id,
 					$option_name,
-					$method->method_title,
-					checked( 1, @$options[$method->method_title], false )
+					$method->id,
+					checked( 1, @$options[$method->id], false )
 				);
 
-				$html .= '<label for="'.$method->method_title.'">'.$method->method_title.'</label><br>';
+				$html .= '<label for="'.$method->id.'">'.$method->title.'</label><br>';
 			}
 
 			// description
